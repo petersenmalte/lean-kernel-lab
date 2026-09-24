@@ -1,6 +1,11 @@
 # lean-kernel-lab
 
-Das Setup ist projektlokal. Es enthält Arbeitsregeln, vier Skills und drei Spezialisten. Eine Wettbewerbslösung und der offizielle Challenge-Checkout sind noch nicht angelegt.
+Das Setup ist projektlokal. Es enthält Arbeitsregeln, vier Skills und drei Spezialisten.
+Eine universell bewiesene Lösung für `partition` liegt in
+[`partition/Submission.lean`](partition/Submission.lean). Algorithmusvarianten,
+vollständige lokale Prüfergebnisse und Reproduktionsbefehle stehen in
+[`partition-work/README.md`](partition-work/README.md). Der offizielle Checkout
+wird separat unter `official/` angelegt und auf einen festen Commit gebunden.
 
 ## Start in Codex
 

@@ -1,0 +1,11 @@
+Local evaluation: unseeded public cases, one wall-time repetition; not official scores.
+partition/Submission.lean: accepted
+  Correctness replay C (verification only): 0.071779291 s; ok
+  Computation replay T: 2.670715499 s; complete
+  n=14: OK (0.071810916s)
+  n=18: OK (0.145159833s)
+  n=22: OK (0.24786575s)
+  n=26: OK (0.404450625s)
+  n=32: OK (0.76170675s)
+  n=36: OK (1.03972163s)
+Local result: /Users/maltepetersen/Documents/ChatGPT/Lean-Coding-Session/official/lean-kernel-challenge/results/local-evaluation/partition/218fa7e8cd13e012.json
