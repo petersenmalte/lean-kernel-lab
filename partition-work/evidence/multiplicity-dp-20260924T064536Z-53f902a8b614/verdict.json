@@ -1,0 +1,514 @@
+{
+  "problem": "partition",
+  "submission": "payload",
+  "run_id": "job",
+  "status": "accepted",
+  "reason": null,
+  "metric": "wall_time",
+  "stages": {
+    "comparator": {
+      "exit": 0,
+      "seconds": 3.9,
+      "tail": "Building Challenge\n\u2714 [2/4] Built Spec (406ms)\n\u26a0 [3/4] Built Challenge (377ms)\nwarning: Challenge.lean:6:4: declaration uses `sorry`\nwarning: Challenge.lean:8:8: declaration uses `sorry`\nBuild completed successfully (4 jobs).\nExporting #[impl_correct, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, impl] from Challenge\nBuilding Solution\n\u2714 [3/5] Built Submission (405ms)\n\u2714 [4/5] Built Solution (340ms)\nBuild completed successfully (5 jobs).\nExporting #[impl_correct, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, impl] from Solution\nRunning Lean default kernel on solution.\nLean default kernel accepts the solution\nYour solution is okay!\n"
+    },
+    "export": {
+      "source": "comparator-verified",
+      "bytes": 1551711
+    },
+    "verified_artifacts": {
+      "source": "comparator-build",
+      "olean_files": 4,
+      "artifact_files": 4,
+      "sha256": "99db445c9d13b1a11bce4a8de0c4ac11b9c091e3861074d79cf0ca235ad78480"
+    },
+    "axioms": {
+      "exit": 0,
+      "tail": "OK: all axioms whitelisted (3 allowed)."
+    },
+    "perf_inputs": [
+      14,
+      18,
+      22,
+      26,
+      32,
+      36
+    ],
+    "performance_plan": [
+      {
+        "slot": 0,
+        "group": "P1",
+        "case": 0,
+        "n": 14,
+        "limits": {
+          "timeout_seconds": 30
+        }
+      },
+      {
+        "slot": 1,
+        "group": "P1",
+        "case": 1,
+        "n": 18,
+        "limits": {
+          "timeout_seconds": 30
+        }
+      },
+      {
+        "slot": 2,
+        "group": "P2",
+        "case": 0,
+        "n": 22,
+        "limits": {
+          "timeout_seconds": 60
+        }
+      },
+      {
+        "slot": 3,
+        "group": "P2",
+        "case": 1,
+        "n": 26,
+        "limits": {
+          "timeout_seconds": 60
+        }
+      },
+      {
+        "slot": 4,
+        "group": "P3",
+        "case": 0,
+        "n": 32,
+        "limits": {
+          "timeout_seconds": 120
+        }
+      },
+      {
+        "slot": 5,
+        "group": "P3",
+        "case": 1,
+        "n": 36,
+        "limits": {
+          "timeout_seconds": 120
+        }
+      }
+    ]
+  },
+  "evaluation_mode": "development",
+  "timing_protocol": "local-v2",
+  "measurement_contract": {
+    "id": "kernel-replay-v2",
+    "correctness_boundary": "full-closure-replay-v1",
+    "performance_boundary": "target-declaration-replay-v1",
+    "target_proof_encoding": "direct-rfl-v1-experimental",
+    "wall_clock_source": "timer-internal-monotonic-ns",
+    "perf_counter_control": "timer-perf-event-open+ioctl-enable",
+    "local_protocol": "local-v2",
+    "remote_protocol": "KTP/3",
+    "timeout_scope": "whole-timer-process-including-untimed-preparation"
+  },
+  "correctness_timing": {
+    "metric": "wall_time",
+    "reps": 1,
+    "result": "ok",
+    "checker": "official-kernel-replay v4.33.1 (kernel-replay-v2)",
+    "measurement_contract": "kernel-replay-v2",
+    "measurement_boundary": "full-closure-replay-v1",
+    "measurement_target": null,
+    "samples": [
+      {
+        "wall_ns": 76079875
+      }
+    ],
+    "median_wall_ns": 76079875,
+    "median_s": 0.076079875
+  },
+  "evaluation_cohort": {
+    "id": "62d20e0f46246ab84423c3f5",
+    "round": "local-dev",
+    "executor": {
+      "kind": "local",
+      "executor": "local",
+      "version": "fixed-host"
+    },
+    "policy_sha256": "62d20e0f46246ab84423c3f57816c837c105d55154980c7bff06a7729555e334",
+    "policy": {
+      "schema": "evaluation-policy-v2",
+      "round": "local-dev",
+      "problem": "partition",
+      "problem_bundle_sha256": "f1adb14e8edf45e6187d9564877d4b2a822ed2de0d15e5c3b06807ff56f7e3b4",
+      "evaluator_bundle_sha256": "128c52603f346b1467feee09272b68cad622fe04f430846741cc3b528700c174",
+      "evaluation_mode": "development",
+      "inputs": [
+        14,
+        18,
+        22,
+        26,
+        32,
+        36
+      ],
+      "metric": "wall_time",
+      "reps": 1,
+      "budgets": {
+        "comparator_timeout_seconds": 600,
+        "audit_timeout_seconds": 60,
+        "timing_timeout_seconds": 120,
+        "perf_phase_budget_seconds": 0,
+        "correctness_replay_timeout_seconds": 120,
+        "case_build_export_timeout_seconds": 120,
+        "case_audit_timeout_seconds": 300
+      },
+      "resource_policy": {
+        "image": "local-unspecified",
+        "memory": "local-unspecified",
+        "cpus": "local-unspecified",
+        "pids_limit": "local-unspecified",
+        "sandbox_mode": "none"
+      },
+      "toolchain": {
+        "lean": "leanprover/lean4:v4.33.1",
+        "comparator_rev": "3927ad383f208ae977c340a91c48ac9b497d2097",
+        "lean4export_rev": "15f6055e299ad5b89345e533cc2192f4cc00f659"
+      },
+      "checker": "official-kernel-replay v4.33.1 (kernel-replay-v2)",
+      "timing_protocol": "local-v2",
+      "measurement_contract": {
+        "id": "kernel-replay-v2",
+        "correctness_boundary": "full-closure-replay-v1",
+        "performance_boundary": "target-declaration-replay-v1",
+        "target_proof_encoding": "direct-rfl-v1-experimental",
+        "wall_clock_source": "timer-internal-monotonic-ns",
+        "perf_counter_control": "timer-perf-event-open+ioctl-enable",
+        "local_protocol": "local-v2",
+        "remote_protocol": "KTP/3",
+        "timeout_scope": "whole-timer-process-including-untimed-preparation"
+      },
+      "executor": {
+        "kind": "local",
+        "executor": "local",
+        "version": "fixed-host"
+      },
+      "evaluation": {
+        "schema": "grouped-evaluation-v1",
+        "memory_mb": 4096,
+        "axis": {
+          "label": "partition argument",
+          "unit": "n",
+          "input_encoding": "direct Nat input"
+        },
+        "groups": [
+          {
+            "id": "P1",
+            "label": "Small",
+            "order": 1,
+            "sampling": {
+              "kind": "geometric_range",
+              "min": 14,
+              "max": 18,
+              "count": 2,
+              "jitter": 0.15
+            },
+            "limits": {
+              "timeout_seconds": 30
+            }
+          },
+          {
+            "id": "P2",
+            "label": "Medium",
+            "order": 2,
+            "sampling": {
+              "kind": "geometric_range",
+              "min": 22,
+              "max": 26,
+              "count": 2,
+              "jitter": 0.15
+            },
+            "limits": {
+              "timeout_seconds": 60
+            }
+          },
+          {
+            "id": "P3",
+            "label": "Large",
+            "order": 3,
+            "sampling": {
+              "kind": "geometric_range",
+              "min": 32,
+              "max": 36,
+              "count": 2,
+              "jitter": 0.15
+            },
+            "limits": {
+              "timeout_seconds": 120
+            }
+          }
+        ],
+        "ranking": {
+          "contract": "computation-total-v1",
+          "work": "curve",
+          "proof": "gate"
+        }
+      },
+      "performance_plan": [
+        {
+          "slot": 0,
+          "group": "P1",
+          "case": 0,
+          "n": 14,
+          "limits": {
+            "timeout_seconds": 30
+          }
+        },
+        {
+          "slot": 1,
+          "group": "P1",
+          "case": 1,
+          "n": 18,
+          "limits": {
+            "timeout_seconds": 30
+          }
+        },
+        {
+          "slot": 2,
+          "group": "P2",
+          "case": 0,
+          "n": 22,
+          "limits": {
+            "timeout_seconds": 60
+          }
+        },
+        {
+          "slot": 3,
+          "group": "P2",
+          "case": 1,
+          "n": 26,
+          "limits": {
+            "timeout_seconds": 60
+          }
+        },
+        {
+          "slot": 4,
+          "group": "P3",
+          "case": 0,
+          "n": 32,
+          "limits": {
+            "timeout_seconds": 120
+          }
+        },
+        {
+          "slot": 5,
+          "group": "P3",
+          "case": 1,
+          "n": 36,
+          "limits": {
+            "timeout_seconds": 120
+          }
+        }
+      ],
+      "performance_plan_sha256": "016fb55190a0e2ff4141c2e4c0f68c617525875e7d7f217d3d4a5f0707b10f97",
+      "seed_commitment": null,
+      "reference_answers": {
+        "contract": "reference-answers-v1",
+        "sha256": "d0f22a33f01a065567963ad8ff2689b7294648acb1142d8d605ddfa7b85f07ff",
+        "spec_sha256": "035cf32a1b9001023a57726cb9ebe622165455d80443ad8d3590b50aa8360368",
+        "count": 6
+      }
+    }
+  },
+  "canonical_work": {
+    "metric": "wall_time",
+    "correctness_median": 0.076079875,
+    "correctness_role": "verification-only",
+    "computation_total": 2.280962626,
+    "eligible": true
+  },
+  "timing": {
+    "metric": "wall_time",
+    "reps": 1,
+    "scaling": [
+      {
+        "n": 14,
+        "result": "ok",
+        "measurement_contract": "kernel-replay-v2",
+        "measurement_boundary": "target-declaration-replay-v1",
+        "measurement_target": "LeanKernelChallengeJudge.Generated_32f8db423f7cf880bf1c26a2.check",
+        "samples": [
+          {
+            "wall_ns": 68045375
+          }
+        ],
+        "median_wall_ns": 68045375,
+        "median_s": 0.068045375,
+        "slot": 0,
+        "group": "P1",
+        "case": 0
+      },
+      {
+        "n": 18,
+        "result": "ok",
+        "measurement_contract": "kernel-replay-v2",
+        "measurement_boundary": "target-declaration-replay-v1",
+        "measurement_target": "LeanKernelChallengeJudge.Generated_0391dd03326501d7c4b61e3f.check",
+        "samples": [
+          {
+            "wall_ns": 129658167
+          }
+        ],
+        "median_wall_ns": 129658167,
+        "median_s": 0.129658167,
+        "slot": 1,
+        "group": "P1",
+        "case": 1
+      },
+      {
+        "n": 22,
+        "result": "ok",
+        "measurement_contract": "kernel-replay-v2",
+        "measurement_boundary": "target-declaration-replay-v1",
+        "measurement_target": "LeanKernelChallengeJudge.Generated_0936d52ace3e9746c786703a.check",
+        "samples": [
+          {
+            "wall_ns": 214023417
+          }
+        ],
+        "median_wall_ns": 214023417,
+        "median_s": 0.214023417,
+        "slot": 2,
+        "group": "P2",
+        "case": 0
+      },
+      {
+        "n": 26,
+        "result": "ok",
+        "measurement_contract": "kernel-replay-v2",
+        "measurement_boundary": "target-declaration-replay-v1",
+        "measurement_target": "LeanKernelChallengeJudge.Generated_1b56f4fcdc6a1db5e8d361ae.check",
+        "samples": [
+          {
+            "wall_ns": 342631875
+          }
+        ],
+        "median_wall_ns": 342631875,
+        "median_s": 0.342631875,
+        "slot": 3,
+        "group": "P2",
+        "case": 1
+      },
+      {
+        "n": 32,
+        "result": "ok",
+        "measurement_contract": "kernel-replay-v2",
+        "measurement_boundary": "target-declaration-replay-v1",
+        "measurement_target": "LeanKernelChallengeJudge.Generated_818146269a52ecc68a7df75f.check",
+        "samples": [
+          {
+            "wall_ns": 573299792
+          }
+        ],
+        "median_wall_ns": 573299792,
+        "median_s": 0.573299792,
+        "slot": 4,
+        "group": "P3",
+        "case": 0
+      },
+      {
+        "n": 36,
+        "result": "ok",
+        "measurement_contract": "kernel-replay-v2",
+        "measurement_boundary": "target-declaration-replay-v1",
+        "measurement_target": "LeanKernelChallengeJudge.Generated_68585626b700bca55466c67a.check",
+        "samples": [
+          {
+            "wall_ns": 953304000
+          }
+        ],
+        "median_wall_ns": 953304000,
+        "median_s": 0.953304,
+        "slot": 5,
+        "group": "P3",
+        "case": 1
+      }
+    ],
+    "checker": "official-kernel-replay v4.33.1 (kernel-replay-v2)",
+    "measurement_contract": "kernel-replay-v2",
+    "measurement_boundary": "target-declaration-replay-v1",
+    "successful_slots": 6,
+    "total_slots": 6,
+    "coverage": 1.0,
+    "headline_n": 36,
+    "median_s": 0.953304
+  },
+  "score": "6/6 passed cases; T=2.28096 wall seconds (dev); C=0.0760799 wall seconds (dev) (verification only)",
+  "replay_report": {
+    "schema": "replay-report-v1",
+    "ranking_contract": "computation-total-v1",
+    "metric": "wall_time",
+    "reps": 1,
+    "eligible": true,
+    "computation_total": 2.280962626,
+    "wall_time_unit": "ns",
+    "memory_unit": "KiB",
+    "memory_scope": "process RSS high-water sampled during replay, including preloaded dependencies",
+    "correctness": {
+      "result": "ok",
+      "verification_only": true,
+      "measurement_boundary": "full-closure-replay-v1",
+      "median_s": 0.076079875,
+      "median_wall_ns": 76079875,
+      "peak_rss_kb": null
+    },
+    "cases": [
+      {
+        "case_id": "case-0001",
+        "group": "P1",
+        "result": "ok",
+        "measurement_boundary": "target-declaration-replay-v1",
+        "median_s": 0.068045375,
+        "median_wall_ns": 68045375,
+        "peak_rss_kb": null
+      },
+      {
+        "case_id": "case-0002",
+        "group": "P1",
+        "result": "ok",
+        "measurement_boundary": "target-declaration-replay-v1",
+        "median_s": 0.129658167,
+        "median_wall_ns": 129658167,
+        "peak_rss_kb": null
+      },
+      {
+        "case_id": "case-0003",
+        "group": "P2",
+        "result": "ok",
+        "measurement_boundary": "target-declaration-replay-v1",
+        "median_s": 0.214023417,
+        "median_wall_ns": 214023417,
+        "peak_rss_kb": null
+      },
+      {
+        "case_id": "case-0004",
+        "group": "P2",
+        "result": "ok",
+        "measurement_boundary": "target-declaration-replay-v1",
+        "median_s": 0.342631875,
+        "median_wall_ns": 342631875,
+        "peak_rss_kb": null
+      },
+      {
+        "case_id": "case-0005",
+        "group": "P3",
+        "result": "ok",
+        "measurement_boundary": "target-declaration-replay-v1",
+        "median_s": 0.573299792,
+        "median_wall_ns": 573299792,
+        "peak_rss_kb": null
+      },
+      {
+        "case_id": "case-0006",
+        "group": "P3",
+        "result": "ok",
+        "measurement_boundary": "target-declaration-replay-v1",
+        "median_s": 0.953304,
+        "median_wall_ns": 953304000,
+        "peak_rss_kb": null
+      }
+    ]
+  },
+  "scored": true
+}

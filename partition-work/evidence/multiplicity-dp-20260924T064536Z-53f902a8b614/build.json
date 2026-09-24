@@ -1,0 +1,10 @@
+{
+  "command": [
+    "lake",
+    "build"
+  ],
+  "cwd": "/var/folders/3m/l24d9vq533qd7snfmjwd2q1r0000gn/T/lkc-partition-build-v6eri955",
+  "exit_code": 0,
+  "elapsed_wall_s": 2.916,
+  "log": "/Users/maltepetersen/Documents/ChatGPT/Lean-Coding-Session/partition-work/evidence/multiplicity-dp-20260924T064536Z-53f902a8b614/build.log"
+}

@@ -31,6 +31,34 @@ Fehlende oder fehlgeschlagene Messungen werden nicht als Null behandelt.
 ausgearbeitete Beispiel hat denselben Algorithmus: `impl := partitionSpec`,
 mit reflexivem universellem Beweis. Der erste Build mit Lean 4.33.1 war erfolgreich.
 
+## Geprüfter erster Zwischenstand
+
+Die aufsteigende Tabellenlösung ist vollständig geprüft, SHA-256
+`53f902a8b614265c70d14afbfd04e3cc40fce2d6948efa6790ecdb6be6af4149`.
+Build, Comparator, Axiom-Audit, Korrektheits-Replay und alle sechs öffentlichen
+Fälle bestanden. Die Summe der lokalen Kernel-Laufzeiten beträgt 2,280962626 s
+gegenüber 26,256420206 s beim Starter. Details und Einzelwerte stehen in
+`evidence/MULTIPLICITY_DP.md`; die geprüfte erste Variante bleibt unter
+`algorithm/Submission.lean` erhalten. Dies ist kein offizieller Instruktionsvergleich.
+
+## Reproduktion
+
+Voraussetzungen: Git, Python 3.9+, elan, C/C++-Toolchain; auf macOS zusätzlich
+GNU coreutils (`brew install coreutils`). Vom Wurzelverzeichnis dieses Repositorys:
+
+```bash
+bash partition-work/setup.sh
+bash partition-work/reproduce.sh "$PWD/partition-work/baseline/Submission.lean" baseline
+bash partition-work/reproduce.sh "$PWD/partition/Submission.lean" final
+```
+
+Die Aufrufe nacheinander auf demselben freien Host ausführen. `setup.sh` klont
+den festgelegten offiziellen Stand und baut dessen unveränderte Prüfwerkzeuge.
+`reproduce.sh` ruft den offiziellen lokalen Evaluator mit expliziten Werkzeugpfaden
+und unverändertem Standardbudget auf. Die JSON-Dateien enthalten die tatsächlich
+ausgeführten Befehle, Prüfsummen, Policy und Einzelresultate. Ein zusätzlicher
+Build erfolgt in einer temporären Kopie des festen Teilnehmerpakets.
+
 ## Untersuchte Ansätze
 
 1. Eine Liste je maximaler Teilegröße, deren Einträge exakt dieselbe

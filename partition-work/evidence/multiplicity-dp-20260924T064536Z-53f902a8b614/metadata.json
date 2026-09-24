@@ -1,0 +1,36 @@
+{
+  "label": "multiplicity-dp",
+  "source": "/Users/maltepetersen/Documents/ChatGPT/Lean-Coding-Session/partition/Submission.lean",
+  "source_sha256": "53f902a8b614265c70d14afbfd04e3cc40fce2d6948efa6790ecdb6be6af4149",
+  "official_checkout": "/Users/maltepetersen/Documents/ChatGPT/Lean-Coding-Session/official/lean-kernel-challenge",
+  "official_commit": "940f0a2ead23ef70ab1387edabb347e629111edd",
+  "lean_toolchain": "leanprover/lean4:v4.33.1",
+  "spec_sha256": "035cf32a1b9001023a57726cb9ebe622165455d80443ad8d3590b50aa8360368",
+  "official_evaluator_sha256": "234b5f15424af24217d86bbe72f373db5c6aa9210376f2b555aa3f074d191d88",
+  "partition_config_sha256": "a5b35df13a388556427b6b41bf6ffeecd93325cfd19631128877d703de4e7fe4",
+  "tool_revisions": {
+    "comparator": "3927ad383f208ae977c340a91c48ac9b497d2097",
+    "lean4export": "15f6055e299ad5b89345e533cc2192f4cc00f659"
+  },
+  "host": {
+    "platform": "macOS-27.0-arm64-arm-64bit",
+    "machine": "arm64",
+    "python": "3.9.6"
+  },
+  "metric": "wall_time",
+  "plan": [
+    14,
+    18,
+    22,
+    26,
+    32,
+    36
+  ],
+  "local_timeout_s": 120,
+  "tool_paths": {
+    "comparator": "/Users/maltepetersen/Documents/ChatGPT/Lean-Coding-Session/partition-work/tools/comparator/.lake/build/bin/comparator",
+    "lean4export": "/Users/maltepetersen/Documents/ChatGPT/Lean-Coding-Session/partition-work/tools/lean4export/.lake/build/bin/lean4export",
+    "timer": "/Users/maltepetersen/Documents/ChatGPT/Lean-Coding-Session/official/lean-kernel-challenge/evaluation/judge/timer-kernel/.lake/build/bin/kernel"
+  },
+  "lean_version": "info: track2partition: no previous manifest, creating one from scratch\ninfo: toolchain not updated; already up-to-date\nLean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)"
+}
