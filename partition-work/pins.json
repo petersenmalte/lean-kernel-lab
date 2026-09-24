@@ -1,0 +1,28 @@
+{
+  "official_repository": "https://github.com/SAIRcompetition/lean-kernel-challenge",
+  "revision": "940f0a2ead23ef70ab1387edabb347e629111edd",
+  "toolchain": "leanprover/lean4:v4.33.1",
+  "host": "macOS-27.0-arm64-arm-64bit",
+  "fixed_sha256": {
+    "problems/partition/Spec.lean": "035cf32a1b9001023a57726cb9ebe622165455d80443ad8d3590b50aa8360368",
+    "problems/partition/lakefile.toml": "abe5aab760e8d1b36742f592a30490e9223e7e5357118e17a6385b8c2dd93cb0",
+    "problems/partition/lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71",
+    "evaluation/config.json": "fb059626106da66ee9c537188b3798f675e7a8358350f8a2a06434a1c86ef77d",
+    "evaluation/problems/partition/config.json": "a5b35df13a388556427b6b41bf6ffeecd93325cfd19631128877d703de4e7fe4",
+    "evaluation/problems/partition/Spec.lean": "035cf32a1b9001023a57726cb9ebe622165455d80443ad8d3590b50aa8360368",
+    "evaluation/problems/partition/Challenge.lean": "f2337f234dd7e8a97d931ef56f2c77c530d05d3482f2e946c71f15b7f8059b78",
+    "evaluation/problems/partition/Solution.lean": "309674fcd5871a589f0ecebde03ef5cf89189637c166043f44af80cdc21bd397",
+    "evaluation/judge/judge.py": "e8538d8fd6fe067e61434ad6e05f81afa1f8173081218e0c3ea9bb8d949f46c8"
+  },
+  "public_cases": [
+    14,
+    18,
+    22,
+    26,
+    32,
+    36
+  ],
+  "metric": "local kernel wall_time, no official PMU",
+  "dependencies": "Core Lean only; no partition dependency-lock.json exists",
+  "baseline_sha256": "19cf636245f1fde66fac04ac82a88f728e9071056278eab0a1bcc11ad9b50305"
+}

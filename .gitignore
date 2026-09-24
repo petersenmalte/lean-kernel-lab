@@ -1,0 +1,9 @@
+official/
+partition-work/tools/
+**/.lake/
+**/__pycache__/
+*.olean
+*.ilean
+*.olean.private
+*.olean.server
+*.trace

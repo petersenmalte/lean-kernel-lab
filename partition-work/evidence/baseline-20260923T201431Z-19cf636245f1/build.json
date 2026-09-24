@@ -1,0 +1,10 @@
+{
+  "command": [
+    "lake",
+    "build"
+  ],
+  "cwd": "/var/folders/3m/l24d9vq533qd7snfmjwd2q1r0000gn/T/lkc-partition-build-0rawhds2",
+  "exit_code": 0,
+  "elapsed_wall_s": 0.933,
+  "log": "/Users/maltepetersen/Documents/ChatGPT/Lean-Coding-Session/partition-work/evidence/baseline-20260923T201431Z-19cf636245f1/build.log"
+}

@@ -1,0 +1,100 @@
+{
+  "compilation": {
+    "passed": true,
+    "command": [
+      "lake",
+      "build"
+    ],
+    "cwd": "/var/folders/3m/l24d9vq533qd7snfmjwd2q1r0000gn/T/lkc-partition-build-0rawhds2",
+    "exit_code": 0,
+    "elapsed_wall_s": 0.933,
+    "log": "/Users/maltepetersen/Documents/ChatGPT/Lean-Coding-Session/partition-work/evidence/baseline-20260923T201431Z-19cf636245f1/build.log"
+  },
+  "evaluation": {
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "evaluation/run.py",
+      "--problem",
+      "partition",
+      "--submission",
+      "/Users/maltepetersen/Documents/ChatGPT/Lean-Coding-Session/partition-work/baseline/Submission.lean",
+      "--timeout",
+      "120"
+    ],
+    "cwd": "/Users/maltepetersen/Documents/ChatGPT/Lean-Coding-Session/official/lean-kernel-challenge",
+    "exit_code": 0,
+    "elapsed_wall_s": 156.422,
+    "log": "/Users/maltepetersen/Documents/ChatGPT/Lean-Coding-Session/partition-work/evidence/baseline-20260923T201431Z-19cf636245f1/evaluation.log",
+    "official_result_path": "/Users/maltepetersen/Documents/ChatGPT/Lean-Coding-Session/official/lean-kernel-challenge/results/local-evaluation/partition/b80b23020b1f85bd.json"
+  },
+  "source_unchanged": true,
+  "result": {
+    "verdict": "accepted",
+    "reason": null,
+    "metric": "wall_time",
+    "protocol": "local-v2",
+    "comparator_exit": 0,
+    "axiom_audit_exit": 0,
+    "correctness_replay": {
+      "result": "ok",
+      "verification_only": true,
+      "measurement_boundary": "full-closure-replay-v1",
+      "median_s": 0.039652375,
+      "median_wall_ns": 39652375,
+      "peak_rss_kb": null
+    },
+    "computation_total_wall_s": 26.256420206,
+    "complete": true,
+    "cases": [
+      {
+        "slot": 0,
+        "group": "P1",
+        "n": 14,
+        "result": "ok",
+        "median_wall_s": 0.071729,
+        "reason": null
+      },
+      {
+        "slot": 1,
+        "group": "P1",
+        "n": 18,
+        "result": "ok",
+        "median_wall_s": 0.262259333,
+        "reason": null
+      },
+      {
+        "slot": 2,
+        "group": "P2",
+        "n": 22,
+        "result": "ok",
+        "median_wall_s": 0.796150166,
+        "reason": null
+      },
+      {
+        "slot": 3,
+        "group": "P2",
+        "n": 26,
+        "result": "ok",
+        "median_wall_s": 2.1369975,
+        "reason": null
+      },
+      {
+        "slot": 4,
+        "group": "P3",
+        "n": 32,
+        "result": "ok",
+        "median_wall_s": 11.100108291,
+        "reason": null
+      },
+      {
+        "slot": 5,
+        "group": "P3",
+        "n": 36,
+        "result": "ok",
+        "median_wall_s": 11.889175916,
+        "reason": null
+      }
+    ],
+    "all_expected_cases_reported": true
+  }
+}
