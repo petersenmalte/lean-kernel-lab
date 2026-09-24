@@ -1,0 +1,16 @@
+{
+  "submission_sha256": "0fe392094beb40ce1672defec11443d58a5466605ebc0e283b39cf7cd752f575",
+  "smoke_sha256": "b8e02e9e6371263c7105c785fd271feab3e227119f2d8afacae790940a506f7a",
+  "official_problem_files_sha256": {
+    "Spec.lean": "035cf32a1b9001023a57726cb9ebe622165455d80443ad8d3590b50aa8360368",
+    "lakefile.toml": "abe5aab760e8d1b36742f592a30490e9223e7e5357118e17a6385b8c2dd93cb0",
+    "lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+  },
+  "commands": [
+    "lake build",
+    "lake env lean Smoke.lean"
+  ],
+  "build_exit": 0,
+  "lean_exit": 0,
+  "source_unchanged": true
+}

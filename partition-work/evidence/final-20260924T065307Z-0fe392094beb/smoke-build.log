@@ -1,0 +1,5 @@
+info: track2partition: no previous manifest, creating one from scratch
+info: toolchain not updated; already up-to-date
+✔ [2/4] Built Spec (358ms)
+✔ [3/4] Built Submission (455ms)
+Build completed successfully (4 jobs).

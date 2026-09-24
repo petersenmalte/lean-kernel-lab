@@ -1,0 +1,100 @@
+{
+  "compilation": {
+    "passed": true,
+    "command": [
+      "lake",
+      "build"
+    ],
+    "cwd": "/var/folders/3m/l24d9vq533qd7snfmjwd2q1r0000gn/T/lkc-partition-build-931wnjj7",
+    "exit_code": 0,
+    "elapsed_wall_s": 1.941,
+    "log": "/Users/maltepetersen/Documents/ChatGPT/Lean-Coding-Session/partition-work/evidence/final-20260924T065307Z-0fe392094beb/build.log"
+  },
+  "evaluation": {
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "evaluation/run.py",
+      "--problem",
+      "partition",
+      "--submission",
+      "/Users/maltepetersen/Documents/ChatGPT/Lean-Coding-Session/partition/Submission.lean",
+      "--timeout",
+      "120"
+    ],
+    "cwd": "/Users/maltepetersen/Documents/ChatGPT/Lean-Coding-Session/official/lean-kernel-challenge",
+    "exit_code": 0,
+    "elapsed_wall_s": 27.805,
+    "log": "/Users/maltepetersen/Documents/ChatGPT/Lean-Coding-Session/partition-work/evidence/final-20260924T065307Z-0fe392094beb/evaluation.log",
+    "official_result_path": "/Users/maltepetersen/Documents/ChatGPT/Lean-Coding-Session/official/lean-kernel-challenge/results/local-evaluation/partition/09bc16f95bf94603.json"
+  },
+  "source_unchanged": true,
+  "result": {
+    "verdict": "accepted",
+    "reason": null,
+    "metric": "wall_time",
+    "protocol": "local-v2",
+    "comparator_exit": 0,
+    "axiom_audit_exit": 0,
+    "correctness_replay": {
+      "result": "ok",
+      "verification_only": true,
+      "measurement_boundary": "full-closure-replay-v1",
+      "median_s": 0.341156125,
+      "median_wall_ns": 341156125,
+      "peak_rss_kb": null
+    },
+    "computation_total_wall_s": 0.600999291,
+    "complete": true,
+    "cases": [
+      {
+        "slot": 0,
+        "group": "P1",
+        "n": 14,
+        "result": "ok",
+        "median_wall_s": 0.021870834,
+        "reason": null
+      },
+      {
+        "slot": 1,
+        "group": "P1",
+        "n": 18,
+        "result": "ok",
+        "median_wall_s": 0.036789083,
+        "reason": null
+      },
+      {
+        "slot": 2,
+        "group": "P2",
+        "n": 22,
+        "result": "ok",
+        "median_wall_s": 0.062124791,
+        "reason": null
+      },
+      {
+        "slot": 3,
+        "group": "P2",
+        "n": 26,
+        "result": "ok",
+        "median_wall_s": 0.097244333,
+        "reason": null
+      },
+      {
+        "slot": 4,
+        "group": "P3",
+        "n": 32,
+        "result": "ok",
+        "median_wall_s": 0.16319375,
+        "reason": null
+      },
+      {
+        "slot": 5,
+        "group": "P3",
+        "n": 36,
+        "result": "ok",
+        "median_wall_s": 0.2197765,
+        "reason": null
+      }
+    ],
+    "all_expected_cases_reported": true
+  }
+}

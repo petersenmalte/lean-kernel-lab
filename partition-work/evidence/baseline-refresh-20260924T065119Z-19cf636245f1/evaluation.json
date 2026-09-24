@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/Library/Developer/CommandLineTools/usr/bin/python3",
+    "evaluation/run.py",
+    "--problem",
+    "partition",
+    "--submission",
+    "/Users/maltepetersen/Documents/ChatGPT/Lean-Coding-Session/partition-work/baseline/Submission.lean",
+    "--timeout",
+    "120"
+  ],
+  "cwd": "/Users/maltepetersen/Documents/ChatGPT/Lean-Coding-Session/official/lean-kernel-challenge",
+  "exit_code": 0,
+  "elapsed_wall_s": 89.769,
+  "log": "/Users/maltepetersen/Documents/ChatGPT/Lean-Coding-Session/partition-work/evidence/baseline-refresh-20260924T065119Z-19cf636245f1/evaluation.log",
+  "official_result_path": "/Users/maltepetersen/Documents/ChatGPT/Lean-Coding-Session/official/lean-kernel-challenge/results/local-evaluation/partition/b80b23020b1f85bd.json"
+}

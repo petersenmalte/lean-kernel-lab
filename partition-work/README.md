@@ -41,6 +41,53 @@ gegenüber 26,256420206 s beim Starter. Details und Einzelwerte stehen in
 `evidence/MULTIPLICITY_DP.md`; die geprüfte erste Variante bleibt unter
 `algorithm/Submission.lean` erhalten. Dies ist kein offizieller Instruktionsvergleich.
 
+## Ausgewählte Lösung
+
+Die endgültig gewählte Variante ist die Münzwechsel-DP in
+[`../partition/Submission.lean`](../partition/Submission.lean), SHA-256
+`0fe392094beb40ce1672defec11443d58a5466605ebc0e283b39cf7cd752f575`.
+Ihr erster vollständiger Evaluatorlauf bestand alle Prüfungen und Fälle mit
+einer lokalen Fallzeitsumme von 0,636535499 s. Algorithmus und universeller
+Beweis sind in [`../partition/README.md`](../partition/README.md) erklärt.
+
+Die abschließende Wiederholung prüfte genau die integrierte Datei:
+Build, Comparator, Axiom-Audit, Korrektheits-Replay und alle sechs Fälle bestanden.
+Die Fallzeitsumme betrug **0,600999291 s**; eine unmittelbar vorausgehende
+Wiederholung des Starters ergab **30,913962707 s**. Beide Durchläufe liefen
+seriell mit denselben Einstellungen auf demselben Host. Die früheren Ergebnisse
+(Starter 26,256420206 s, Coin-DP 0,636535499 s) bleiben zur Einordnung der
+Wall-Time-Schwankungen erhalten. Der Vergleich ist kein offizieller Score.
+
+| n | Starter, Wiederholung (s) | Finale Datei (s) |
+| ---: | ---: | ---: |
+| 14 | 0,073596125 | 0,021870834 |
+| 18 | 0,235924458 | 0,036789083 |
+| 22 | 0,765234000 | 0,062124791 |
+| 26 | 1,966541458 | 0,097244333 |
+| 32 | 8,482210416 | 0,163193750 |
+| 36 | 19,390456250 | 0,219776500 |
+| Summe | 30,913962707 | 0,600999291 |
+
+Rohdaten: `evidence/baseline-refresh-20260924T065119Z-19cf636245f1/` und
+`evidence/final-20260924T065307Z-0fe392094beb/`. Insbesondere enthalten
+`verdict.json` die Comparator-, Audit-, Policy- und Replay-Ergebnisse und
+`metadata.json` die geprüften Datei- und Werkzeugidentitäten.
+
+Die separate Abschlussprüfung in einem frischen Teilnehmerpaket bestätigt den
+exakten Theoremtyp und die Axiome `[propext, Quot.sound]`. Die veröffentlichten
+Beispiele `0, 1, 4, 5, 10` bestehen jeweils per `rfl`. Reproduktion dieses
+Zusatzchecks (aktualisiert dessen Logs im Evidenzverzeichnis):
+
+```bash
+python3 partition-work/evidence/final-20260924T065307Z-0fe392094beb/smoke.py
+```
+
+Die absteigende Multiplizitätstabelle wurde nach einem vollständigen Vergleich
+verworfen: 2,670715499 s gegenüber 2,280962626 s für die aufsteigende Variante.
+Beide waren korrekt; der Versuch brachte keinen gemessenen Geschwindigkeitsvorteil.
+Die Varianten werden nicht weiter ausgebaut. Der dokumentierte Versuchsrahmen
+umfasste zwei Algorithmen und zwei Darstellungen der ersten Variante.
+
 ## Reproduktion
 
 Voraussetzungen: Git, Python 3.9+, elan, C/C++-Toolchain; auf macOS zusätzlich
@@ -71,3 +118,15 @@ Build erfolgt in einer temporären Kopie des festen Teilnehmerpakets.
 Eine Array-Repräsentation ist nicht automatisch schneller im Kernel: die
 Core-Definitionen von `Array.getInternal` und `Array.push` reduzieren auf
 Listenoperationen. Native Laufzeiten wären hierfür kein belastbarer Nachweis.
+
+## Offene Einschränkungen
+
+Es sind keine Compiler-, Korrektheits- oder Fallfehler in den abschließend
+geprüften Dateien offen. Die absteigende Darstellung wurde aus Leistungsgründen
+verworfen. Offizielle PMU-Instruktionsmessung, geheimer Testplan, drei offizielle
+Wiederholungen und Prüfung unter erzwungener 4-GiB-Containergrenze bleiben
+unverfügbar. Ein globales Geschwindigkeitsoptimum wird nicht behauptet.
+
+Der vom Nutzer verlinkte Contributor-Network-Webauftritt war über das Web-Werkzeug
+nicht abrufbar; Regeln, Spezifikation und Evaluator wurden aus dem angeforderten
+offiziellen Git-Repository gelesen und am oben genannten Commit festgehalten.
